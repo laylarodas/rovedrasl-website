@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Service } from '../data/types';
+import type { Service } from '../data/types';
 
 interface ServiceCardProps {
   service: Service;
