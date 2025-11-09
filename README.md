@@ -127,11 +127,51 @@ npm run lint      # Run ESLint for code quality
 
 ### 🌐 Deployment
 
-The site is automatically deployed to Vercel:
+#### Deploy on Vercel
 
-1. Connected to GitHub repository
-2. Auto-deploys on push to `main` branch
-3. Custom domain configured: [reformasrovedra.es](https://reformasrovedra.es)
+Follow these steps to deploy the site to Vercel with the custom domain:
+
+1. **Import Project to Vercel**
+   - Log in to [vercel.com](https://vercel.com)
+   - Click "Add New..." → "Project"
+   - Select "Import from GitHub"
+   - Choose `laylarodas/rovedrasl-website` repository
+   - Click "Import"
+
+2. **Configure Build Settings**
+   - Framework Preset: **Vite** (auto-detected)
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install` (default)
+   - Click "Deploy" to start the first deployment
+
+3. **Configure Custom Domain**
+   - After successful deployment, go to Project Settings
+   - Navigate to "Domains" section
+   - Click "Add" and enter: `reformasrovedra.es`
+   - Optionally add: `www.reformasrovedra.es`
+
+4. **Configure DNS at Your Registrar**
+   - Go to your domain registrar's DNS management
+   - Add the following records:
+     - **Type:** `A` → **Name:** `@` → **Value:** (IP provided by Vercel)
+     - **Type:** `CNAME` → **Name:** `www` → **Value:** `cname.vercel-dns.com`
+   - Wait 5-30 minutes for DNS propagation
+
+5. **Add Environment Variables**
+   - In Vercel Project Settings → "Environment Variables"
+   - Add variable:
+     - **Name:** `VITE_FORMSPREE_ID`
+     - **Value:** Your Formspree URL (e.g., `https://formspree.io/f/YOUR_ID`)
+   - Apply to: Production, Preview, and Development
+
+6. **Verify Deployment**
+   - Once DNS propagates, visit `https://reformasrovedra.es`
+   - Verify HTTPS certificate is active (automatic)
+   - Test the contact form to ensure Formspree integration works
+   - All future pushes to `main` branch will auto-deploy
+
+**Note:** After adding environment variables, trigger a re-deployment if needed.
 
 ### 📧 Contact Form
 
@@ -282,11 +322,51 @@ npm run lint      # Ejecutar ESLint para calidad de código
 
 ### 🌐 Despliegue
 
-El sitio se despliega automáticamente en Vercel:
+#### Desplegar en Vercel
 
-1. Conectado al repositorio de GitHub
-2. Despliegue automático al hacer push a la rama `main`
-3. Dominio personalizado configurado: [reformasrovedra.es](https://reformasrovedra.es)
+Sigue estos pasos para desplegar el sitio en Vercel con el dominio personalizado:
+
+1. **Importar Proyecto a Vercel**
+   - Inicia sesión en [vercel.com](https://vercel.com)
+   - Haz clic en "Add New..." → "Project"
+   - Selecciona "Import from GitHub"
+   - Elige el repositorio `laylarodas/rovedrasl-website`
+   - Haz clic en "Import"
+
+2. **Configurar Ajustes de Build**
+   - Framework Preset: **Vite** (auto-detectado)
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install` (por defecto)
+   - Haz clic en "Deploy" para iniciar el primer despliegue
+
+3. **Configurar Dominio Personalizado**
+   - Después del despliegue exitoso, ve a Ajustes del Proyecto
+   - Navega a la sección "Domains"
+   - Haz clic en "Add" e ingresa: `reformasrovedra.es`
+   - Opcionalmente agrega: `www.reformasrovedra.es`
+
+4. **Configurar DNS en tu Registrador**
+   - Ve a la gestión DNS de tu registrador de dominio
+   - Agrega los siguientes registros:
+     - **Tipo:** `A` → **Nombre:** `@` → **Valor:** (IP proporcionada por Vercel)
+     - **Tipo:** `CNAME` → **Nombre:** `www` → **Valor:** `cname.vercel-dns.com`
+   - Espera 5-30 minutos para la propagación DNS
+
+5. **Agregar Variables de Entorno**
+   - En Ajustes del Proyecto de Vercel → "Environment Variables"
+   - Agrega la variable:
+     - **Nombre:** `VITE_FORMSPREE_ID`
+     - **Valor:** Tu URL de Formspree (ej., `https://formspree.io/f/TU_ID`)
+   - Aplicar a: Production, Preview y Development
+
+6. **Verificar Despliegue**
+   - Una vez que el DNS se propague, visita `https://reformasrovedra.es`
+   - Verifica que el certificado HTTPS esté activo (automático)
+   - Prueba el formulario de contacto para asegurar que Formspree funcione
+   - Todos los futuros pushes a la rama `main` se desplegarán automáticamente
+
+**Nota:** Después de agregar variables de entorno, activa un re-despliegue si es necesario.
 
 ### 📧 Formulario de Contacto
 

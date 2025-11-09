@@ -2,6 +2,8 @@ import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 
+const FORMSPREE = import.meta.env.VITE_FORMSPREE_ID || 'https://formspree.io/f/XXXXYYYY';
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -17,7 +19,7 @@ const ContactForm = () => {
     setStatus('submitting');
 
     try {
-      const response = await fetch('https://formspree.io/f/XXXXYYYY', {
+      const response = await fetch(FORMSPREE, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
