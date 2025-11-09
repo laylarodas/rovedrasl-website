@@ -13,12 +13,10 @@ const ContactForm = () => {
     consent: false,
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setStatus('submitting');
-    setErrorMessage('');
 
     console.log('Formspree URL:', FORMSPREE); // Debug
 
@@ -46,12 +44,10 @@ const ContactForm = () => {
       } else {
         const errorData = await response.json().catch(() => ({}));
         console.error('Error response:', errorData); // Debug
-        setErrorMessage(errorData.error || 'Error del servidor');
         setStatus('error');
       }
     } catch (error) {
       console.error('Fetch error:', error); // Debug
-      setErrorMessage('Error de conexión. Por favor, verifica tu internet.');
       setStatus('error');
     }
   };
@@ -153,8 +149,7 @@ const ContactForm = () => {
       {status === 'error' && (
         <div className="p-4 rounded-xl bg-red-50 border border-red-200 text-red-800">
           <p className="font-semibold">Hubo un error al enviar el mensaje.</p>
-          {errorMessage && <p className="text-sm mt-1">{errorMessage}</p>}
-          <p className="text-sm mt-2">Por favor, inténtalo de nuevo o contacta directamente por email.</p>
+          <p className="text-sm mt-2">Por favor, inténtalo de nuevo o contacta directamente a: rovedra.sl@gmail.com</p>
         </div>
       )}
     </form>
