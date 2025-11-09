@@ -30,7 +30,7 @@ const Privacy = () => {
             <div className="bg-brand-100 p-6 rounded-xl">
               <p><strong>Denominación social:</strong> ROVEDRA S.L.</p>
               <p><strong>Dirección:</strong> Palma de Mallorca, Islas Baleares, España</p>
-              <p><strong>Email de contacto:</strong> info@reformasrovedra.es</p>
+              <p><strong>Email de contacto:</strong> rovedra.sl@gmail.com</p>
               <p><strong>Actividad:</strong> Reformas integrales, cocinas y baños</p>
             </div>
           </section>
@@ -96,7 +96,7 @@ const Privacy = () => {
               <li><strong>Derecho a la portabilidad:</strong> Recibir sus datos en formato estructurado</li>
             </ul>
             <p className="mt-4">
-              Para ejercer estos derechos, puede dirigirse a: <strong>info@reformasrovedra.es</strong>
+              Para ejercer estos derechos, puede dirigirse a: <strong>rovedra.sl@gmail.com</strong>
             </p>
             <p>
               También tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos 

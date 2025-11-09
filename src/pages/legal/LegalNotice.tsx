@@ -23,10 +23,10 @@ const LegalNotice = () => {
             </p>
             <div className="bg-brand-100 p-6 rounded-xl space-y-2">
               <p><strong>Denominación social:</strong> ROVEDRA S.L.</p>
-              <p><strong>NIF:</strong> B-XXXXXXXX (pendiente de completar)</p>
+              <p><strong>NIF:</strong> B-10629889 </p>
               <p><strong>Domicilio social:</strong> Palma de Mallorca, Islas Baleares, España</p>
-              <p><strong>Correo electrónico:</strong> info@reformasrovedra.es</p>
-              <p><strong>Teléfono:</strong> +34 XXX XXX XXX (pendiente de completar)</p>
+              <p><strong>Correo electrónico:</strong> rovedra.sl@gmail.com</p>
+              <p><strong>Teléfono:</strong> +34 665 267 715 </p>
               <p><strong>Actividad:</strong> Reformas integrales, cocinas y baños</p>
               <p><strong>Registro Mercantil:</strong> (pendiente de completar)</p>
             </div>

@@ -163,7 +163,7 @@ const Cookies = () => {
               Si tiene dudas sobre esta Política de Cookies, puede contactar con nosotros en:
             </p>
             <div className="bg-brand-100 p-6 rounded-xl mt-4">
-              <p><strong>Email:</strong> info@reformasrovedra.es</p>
+              <p><strong>Email:</strong> rovedra.sl@gmail.com</p>
               <p><strong>Web:</strong> reformasrovedra.es</p>
             </div>
           </section>
