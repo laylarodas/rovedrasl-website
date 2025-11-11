@@ -85,7 +85,7 @@ const Hero = () => {
           {/* Trust badges - Optimizado para mobile (2 columnas en mobile) */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-brand-300/50">
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-serif font-bold text-brand-900 mb-1">+15</div>
+              <div className="text-2xl sm:text-3xl font-serif font-bold text-brand-900 mb-1">+25</div>
               <div className="text-xs sm:text-sm text-brand-700">Años experiencia</div>
             </div>
             <div className="text-center">
