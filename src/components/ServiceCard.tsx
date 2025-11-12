@@ -15,16 +15,19 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
         <div className="aspect-video overflow-hidden">
           <img 
             src={service.image} 
-            alt={service.title}
+            alt={`Servicio de ${service.title} en Palma de Mallorca`}
             loading="lazy"
             className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
           />
         </div>
       )}
       <div className="p-6">
-        <h3 className="text-xl font-serif text-brand-900 mb-2">
-          {service.title}
-        </h3>
+        <div className="flex items-center gap-3 mb-3">
+          <span className="text-2xl">{service.icon}</span>
+          <h3 className="text-xl font-serif text-brand-900">
+            {service.title}
+          </h3>
+        </div>
         <p className="text-brand-700">
           {service.summary}
         </p>
