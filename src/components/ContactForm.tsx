@@ -141,8 +141,18 @@ const ContactForm = () => {
       </button>
 
       {status === 'success' && (
-        <div className="p-4 rounded-xl bg-green-50 border border-green-200 text-green-800">
-          ¡Gracias! Tu mensaje ha sido enviado correctamente. Te responderemos pronto.
+        <div className="p-6 rounded-xl bg-green-50 border-2 border-green-300 text-green-800 animate-success">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="flex-shrink-0 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center animate-checkmark">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div className="font-bold text-lg">¡Mensaje Enviado!</div>
+          </div>
+          <p className="text-green-700">
+            Gracias por contactarnos. Te responderemos en menos de 24 horas.
+          </p>
         </div>
       )}
 
@@ -157,4 +167,48 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+// Add inline styles for success animation
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes successBounce {
+    0% {
+      opacity: 0;
+      transform: scale(0.8) translateY(-10px);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  @keyframes checkmarkPop {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .animate-success {
+    animation: successBounce 0.5s ease-out;
+  }
+
+  .animate-checkmark {
+    animation: checkmarkPop 0.6s ease-out 0.2s backwards;
+  }
+`;
+if (typeof document !== 'undefined' && !document.getElementById('contact-form-styles')) {
+  style.id = 'contact-form-styles';
+  document.head.appendChild(style);
+}
 
