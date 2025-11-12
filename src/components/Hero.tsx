@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
+  // TODO: Future enhancement - Replace the image with a short video for more visual impact
+  // Video should be: optimized for web, autoplay, loop, muted, max 10-15 seconds
+  
   return (
     <section className="relative pt-4 pb-12 md:pt-8 md:pb-20 lg:pt-12 lg:pb-24 overflow-hidden">
       {/* Background decoration */}

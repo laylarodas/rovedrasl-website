@@ -60,7 +60,35 @@ header a {
   bottom: 0;
 }
 
-/* Custom animations for Projects page */
+/* Custom animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out backwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out backwards;
+}
+
 @keyframes scaleIn {
   0% {
     opacity: 0;
@@ -92,4 +120,32 @@ header a {
 
 .animate-pulse-arrow {
   animation: pulseArrow 2s ease-in-out infinite backwards;
+}
+
+/* Bounce animation for trust badge icons on hover */
+@keyframes bounceHover {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-bounce-hover {
+  animation: bounceHover 0.6s ease-in-out;
+}
+
+/* Slow bounce animation */
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 3s ease-in-out infinite;
 }
