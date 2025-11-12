@@ -59,3 +59,37 @@ header a {
 .hamburger-icon::after {
   bottom: 0;
 }
+
+/* Custom animations for Projects page */
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseArrow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out backwards;
+}
+
+.animate-pulse-arrow {
+  animation: pulseArrow 2s ease-in-out infinite backwards;
+}
