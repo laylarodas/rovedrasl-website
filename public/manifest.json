@@ -1,0 +1,22 @@
+{
+  "name": "Rovedra S.L. - Reformas en Palma",
+  "short_name": "Rovedra",
+  "description": "Empresa de reformas integrales en Palma de Mallorca con más de 25 años de experiencia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#991b1b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "home"],
+  "lang": "es-ES",
+  "dir": "ltr"
+}
+

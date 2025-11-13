@@ -23,7 +23,7 @@ const Home = () => {
     <>
       <SEO
         title="Reformas en Palma de Mallorca"
-        description="Reformas integrales, cocinas y baños. Presupuesto en 24h."
+        description="⭐ Empresa de reformas integrales en Palma con +25 años de experiencia. Especialistas en cocinas, baños y reformas completas. Presupuesto gratuito en 24h. ☎️ 665 267 715"
         canonical="https://reformasrovedra.es/"
       />
 
