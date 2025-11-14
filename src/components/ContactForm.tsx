@@ -2,7 +2,7 @@ import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 
-const FORMSPREE = import.meta.env.VITE_FORMSPREE_ID || 'https://formspree.io/f/XXXXYYYY';
+const FORMSPREE = import.meta.env.VITE_FORMSPREE_ID || 'https://formspree.io/f/xqawzwek';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({

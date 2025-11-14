@@ -162,8 +162,10 @@ Follow these steps to deploy the site to Vercel with the custom domain:
    - In Vercel Project Settings → "Environment Variables"
    - Add variable:
      - **Name:** `VITE_FORMSPREE_ID`
-     - **Value:** Your Formspree URL (e.g., `https://formspree.io/f/YOUR_ID`)
+     - **Value:** `https://formspree.io/f/xqawzwek`
    - Apply to: Production, Preview, and Development
+   
+   📖 **For detailed environment setup guide, see [ENV-SETUP.md](ENV-SETUP.md)**
 
 6. **Verify Deployment**
    - Once DNS propagates, visit `https://reformasrovedra.es`
