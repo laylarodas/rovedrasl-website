@@ -8,6 +8,9 @@ import Contact from './pages/Contact';
 import Privacy from './pages/legal/Privacy';
 import LegalNotice from './pages/legal/LegalNotice';
 import Cookies from './pages/legal/Cookies';
+import CookieBanner from './components/CookieBanner';
+import WhatsAppButton from './components/WhatsAppButton';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -24,6 +27,11 @@ function App() {
           <Route path="legal/cookies" element={<Cookies />} />
         </Route>
       </Routes>
+      
+      {/* Global Components */}
+      <CookieBanner />
+      <WhatsAppButton />
+      <ScrollToTop />
     </BrowserRouter>
   );
 }
