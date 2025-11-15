@@ -125,17 +125,13 @@ const Services = () => {
 
       {/* Sticky Navigation Menu */}
       <div className="sticky top-16 z-40 bg-white/95 backdrop-blur-sm border-b border-brand-200 shadow-md mb-8 animate-fadeIn">
-        <div className="max-w-7xl mx-auto px-4 relative">
-          {/* Gradient indicators for scroll - Mobile only */}
-          <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white/90 to-transparent pointer-events-none z-10 md:hidden"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white/90 to-transparent pointer-events-none z-10 md:hidden"></div>
-          
-          <nav className="flex md:justify-start overflow-x-auto py-2 gap-2 md:gap-3 scrollbar-hide">
+        <div className="max-w-7xl mx-auto px-4">
+          <nav className="flex flex-wrap justify-center md:justify-start py-2 gap-2 md:gap-3">
             {services.map((service) => (
               <button
                 key={service.slug}
                 onClick={() => scrollToService(service.slug)}
-                className={`flex md:flex-row items-center justify-center md:gap-2 rounded-lg transition-all duration-300 hover:scale-105 flex-shrink-0 ${
+                className={`flex md:flex-row items-center justify-center md:gap-2 rounded-lg transition-all duration-300 hover:scale-105 ${
                   activeSection === service.slug
                     ? 'bg-brand-500 text-white shadow-lg'
                     : 'bg-brand-50 text-brand-700 hover:bg-brand-100'
@@ -143,7 +139,7 @@ const Services = () => {
                 title={service.title}
               >
                 {/* Mobile: Solo icono */}
-                <span className="md:hidden text-3xl p-2.5">{service.icon}</span>
+                <span className="md:hidden text-2xl p-2">{service.icon}</span>
                 
                 {/* Desktop: Icono + Texto */}
                 <span className="hidden md:inline text-xl">{service.icon}</span>
@@ -151,14 +147,6 @@ const Services = () => {
               </button>
             ))}
           </nav>
-          
-          {/* Scroll hint - Mobile only */}
-          <div className="md:hidden text-center pb-1">
-            <span className="text-brand-400 flex items-center justify-center gap-2 text-sm">
-              <span>←</span>
-              <span>→</span>
-            </span>
-          </div>
         </div>
       </div>
 
